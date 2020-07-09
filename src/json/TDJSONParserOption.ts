@@ -19,10 +19,8 @@ export default class TDJSONParserOption {
   // }
 
   public constructor(source: CharSource | string) {
-    if (source instanceof CharSource)
-      this.source = source;
-    else 
-      this.source = new StringCharSource(source);
+    if (source instanceof CharSource) this.source = source;
+    else this.source = new StringCharSource(source);
   }
 
   public setDefaultRootType(type: TDNodeType) {
